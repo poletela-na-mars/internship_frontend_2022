@@ -1,12 +1,48 @@
-import "./App.css";
 import React from "react";
+import {Route, Switch} from "react-router-dom";
+import {connect} from "react-redux";
 
+import MainPage from "./components/main-page/MainPage";
+import ArticlePage from "./components/article-page/ArticlePage";
 
-const App = () =>  {
+import {AsyncOperation} from "./reducer/reducer";
+
+const App = (props) => {
+  const {getCurrentArticle, getArticles} = props;
+  const LoadingArticles = () => {
+    getArticles();
+    return <MainPage/>;
+  };
+
+  const LoadingArticle = () => {
+    getCurrentArticle(window.location.pathname.slice(1));
+    return <ArticlePage/>
+  };
+
   return (
-    <div className="App">
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <LoadingArticles/>
+      </Route>
+      <Route path="/:id">
+        <LoadingArticle/>
+      </Route>
+    </Switch>
   );
-}
+};
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  getCurrentArticle: (articleId) => {
+    dispatch(AsyncOperation.getCurrentArticle(articleId));
+  },
+  getArticles: () => {
+    dispatch(AsyncOperation.getArticles());
+  }
+});
+
+//TODO: -move to scss
+//      -pagination
+//      -security
+//      -autoprefixer
+
+export default connect(null, mapDispatchToProps)(App);

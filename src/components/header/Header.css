@@ -1,0 +1,101 @@
+header {
+    height: 130px;
+    background-color: #3940d7;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.header-h1 {
+    font-size: 22px;
+}
+
+.header-controls {
+    top: 35px;
+    left: 27%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.update-img {
+    height: 30px;
+    width: 30px;
+    background-image: url('../../img/update.png');
+    background-position: center;
+    background-size: cover;
+    margin-left: 50px;
+
+    transition: transform .7s linear;
+}
+
+.update-img:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.update-img-animation {
+    animation: animation-button .7s infinite linear;
+
+    -webkit-animation-name: animation-button;
+    -webkit-animation-duration: .7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: animation-button;
+    -moz-animation-duration: .7s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: animation-button;
+    -o-animation-duration: .7s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+
+@-webkit-keyframes animation-button {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+
+@-moz-keyframes animation-button {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+
+@-o-keyframes animation-button {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}
+
+@keyframes animation-button {
+    0% {-webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);
+        -moz-transform:rotate(720deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);}
+}

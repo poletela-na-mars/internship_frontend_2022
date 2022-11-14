@@ -1,0 +1,33 @@
+.error-block {
+    min-height: 100vh;
+}
+
+.main-part-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-grow: 1;
+}
+
+.error-block, .main-part-error {
+    display: flex;
+    flex-direction: column;
+}
+
+.h1-message {
+    margin: 20px 0 40px;
+}
+
+.p-message {
+    margin: 0 0 20px;
+}
+
+.error-button {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

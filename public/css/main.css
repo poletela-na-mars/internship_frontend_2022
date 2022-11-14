@@ -1,0 +1,257 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo 2 Medium', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.article-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    max-width: 100%;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    word-wrap: break-word;
+}
+
+.article-item-link, .article-item-info {
+    max-width: inherit;
+    box-sizing: border-box;
+}
+
+.article-item-link {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+.article-item-link:hover {
+    color: #3940d7;
+}
+
+.article-item-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.article-item-rating, .article-item-author, .article-item-date {
+    margin-right: 15px;
+}
+
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.load-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-controls-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+
+.header-controls-return-button {
+    background: url("https://img.icons8.com/ios-glyphs/30/000000/home.png") no-repeat;
+}
+
+.header-controls-refresh-button {
+    background: url("https://img.icons8.com/ios-glyphs/30/000000/refresh--v1.png") no-repeat;
+}
+
+.header-controls-refresh-button-animation {
+    animation: refresh-button 2s infinite linear;
+}
+
+@keyframes refresh-button {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.list {
+    padding: 0;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-part {
+    flex-grow: 1;
+}
+
+.comment-item {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.comment-item-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 12px;
+
+}
+
+.blue-button {
+    align-self: center;
+
+    font-family: "Exo 2 Light", sans-serif;
+
+    color: #fff;
+    background-color: #3940d7;
+
+    border-radius: 20px;
+
+    border: none;
+    position: relative;
+    box-sizing: border-box;
+
+    margin-top: 20px;
+
+    transition: all 1000ms ease;
+}
+
+.comment-show-more-button {
+    width: 120px;
+    height: 40px;
+
+    font-size: 14px;
+}
+
+.blue-button:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 42px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    transition: all 2s ease;
+}
+
+.blue-button:hover:before {
+    width: 100%;
+}
+
+.comment-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.shadow-form {
+    -moz-border-radius: 15px;
+    -webkit-border-radius:15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.21);
+
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.comment-item-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+
+    max-width: inherit;
+    box-sizing: border-box;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+    margin-bottom: 40px;
+
+    word-break : break-all;
+}
+
+.comment-info, .comment-title {
+    max-width: inherit;
+    box-sizing: border-box;
+}
+
+.comment-title-container {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.comment-item-block .comment-item-block {
+    margin-bottom: 5px;
+}
+
+.comment-item-block .comment-item-block:last-child {
+    margin-bottom: 0;
+}
+
+.comment-item-text {
+    margin: 0;
+}
+
+.author {
+    margin-right: 15px;
+}
+
+.nested-comment {
+    max-width: inherit;
+    box-sizing: border-box;
+    margin: 20px 0 0 0;
+}
+

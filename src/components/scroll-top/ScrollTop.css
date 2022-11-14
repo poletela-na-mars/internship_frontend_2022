@@ -1,0 +1,16 @@
+#scroll__top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 32px;
+    height: 32px;
+    background: url(/src/img/scroll_top.png) 50% 50% no-repeat;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+#scroll__top:hover {
+    opacity: 1;
+}
