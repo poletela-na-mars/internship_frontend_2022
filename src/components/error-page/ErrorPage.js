@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import "./ErrorPage.css";
+import "./ErrorPage.scss";
 
 import Header from "../header/Header";
 import Footer from "../footer/Footer";

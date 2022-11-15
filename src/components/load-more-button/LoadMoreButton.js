@@ -1,6 +1,8 @@
 import {ActionCreator} from "../../reducer/action-creator";
 import {connect} from "react-redux";
 
+import "./LoadMoreButton.scss";
+
 import {NUMBER_OF_PAGES} from "../main-page/MainPage";
 
 const LoadMoreButton = (props) => {
