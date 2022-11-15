@@ -55,6 +55,9 @@ const reducer = createReducer(initialState, (builder) => {
         .addCase(ActionType.CHANGE_UPDATE_STATUS, (state, action) => {
             state.updateStatus = action.payload;
         })
+        .addCase(ActionType.CHANGE_NUMBER_OF_PAGE, (state, action) => {
+            state.numberOfPage = action.payload;
+        })
         .addDefaultCase((state) => {
             Object.assign(state, initialState);
         })

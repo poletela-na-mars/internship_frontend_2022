@@ -1,0 +1,7 @@
+@import "./../../vars.scss";
+@import "./../in.focus/public/css/main.css";
+
+.load-more-button {
+  @extend .blue-button;
+  margin-top: 0;
+}

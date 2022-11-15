@@ -6,6 +6,7 @@ import "./MainPage.scss";
 
 import Header from "../header/Header";
 import Loader from "../loader/Loader";
+import LoadMoreButton from "../load-more-button/LoadMoreButton";
 import ScrollTop from "../scroll-top/ScrollTop";
 import Footer from "../footer/Footer";
 
@@ -13,9 +14,13 @@ import {fixDate} from "../../utils";
 import {AsyncOperation} from "../../reducer/reducer";
 import {ActionCreator} from "../../reducer/action-creator";
 
+export const NUMBER_OF_ARTICLES = 100;
+export const NUMBER_OF_PAGES = 5;
+
+
 const MainPage = (props) => {
     const {
-        articles, isEachArticleLoaded,
+        articles, isEachArticleLoaded, numberOfPage,
         getArticles, changeUpdateStatus
     } = props;
 
@@ -30,8 +35,9 @@ const MainPage = (props) => {
         };
     });
 
-    const getArticlesList = (articles) => {
-        return articles.filter(it => it !== null).map((it) => {
+    const getArticlesList = () => {
+      const slicedArticles = articles.slice(0, (NUMBER_OF_ARTICLES / NUMBER_OF_PAGES) * (numberOfPage + 1));
+        return slicedArticles.filter(it => it !== null).map((it) => {
             const date = fixDate(it.time);
 
             return (
@@ -55,8 +61,9 @@ const MainPage = (props) => {
             <div className="block">
                 <Header page={`MAIN_PAGE`} minimum={false}/>
                 <ul className="list">
-                    {getArticlesList(articles)}
+                    {getArticlesList()}
                 </ul>
+                <LoadMoreButton />
                 <ScrollTop displayAfter={100}/>
                 <Footer/>
             </div>
@@ -74,7 +81,8 @@ const MainPage = (props) => {
 
 const mapStateToProps = (state) => ({
     articles: state.articles,
-    isEachArticleLoaded: state.isEachArticleLoaded
+    isEachArticleLoaded: state.isEachArticleLoaded,
+    numberOfPage: state.numberOfPage
 });
 
 const mapDispatchToProps = (dispatch) => ({

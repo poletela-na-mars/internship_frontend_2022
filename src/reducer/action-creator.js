@@ -9,7 +9,8 @@ const ActionType = {
     GET_CURRENT_ARTICLE: `GET_CURRENT_ARTICLE`,
     CHANGE_CURRENT_ARTICLE_LOADING_STATUS: `CHANGE_CURRENT_ARTICLE_LOADING_STATUS`,
     DROP_CURRENT_ARTICLE: `DROP_CURRENT_ARTICLE`,
-    CHANGE_UPDATE_STATUS: `CHANGE_UPDATE_STATUS`
+    CHANGE_UPDATE_STATUS: `CHANGE_UPDATE_STATUS`,
+    CHANGE_NUMBER_OF_PAGE: 'CHANGE_NUMBER_OF_PAGE'
 };
 
 const ActionCreator = {
@@ -22,6 +23,7 @@ const ActionCreator = {
     changeCurrentArticleLoadingStatus: createAction(ActionType.CHANGE_CURRENT_ARTICLE_LOADING_STATUS, payload => ({payload})),
     dropCurrentArticle: createAction(ActionType.DROP_CURRENT_ARTICLE, payload => ({payload})),
     changeUpdateStatus: createAction(ActionType.CHANGE_UPDATE_STATUS, payload => ({payload})),
+    changeNumberOfPage: createAction(ActionType.CHANGE_NUMBER_OF_PAGE, payload => ({payload}))
 };
 
 export {ActionCreator, ActionType};

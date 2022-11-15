@@ -6,7 +6,8 @@ const initialState = {
     isEachCommentLoaded: false,
     isCurrentArticleLoaded: false,
     currentArticleId: -1,
-    updateStatus: false
+    updateStatus: false,
+    numberOfPage: 0
 };
 
 export default initialState;

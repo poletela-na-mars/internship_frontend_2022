@@ -44,5 +44,6 @@ const mapDispatchToProps = (dispatch) => ({
 //      -!pagination
 //      -security
 //      -autoprefixer
+//      -kidsAreAlive in Comment
 
 export default connect(null, mapDispatchToProps)(App);

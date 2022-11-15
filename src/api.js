@@ -1,4 +1,5 @@
 import axios from "axios";
+import {NUMBER_OF_ARTICLES} from "./components/main-page/MainPage";
 
 const api = axios.create({
     baseURL: `https://hacker-news.firebaseio.com/v0/`,
@@ -26,7 +27,7 @@ const catchErrorInAxios = (error) => {
 };
 
 const getArticles = async () => {
-    const newIds = await api.get(`newstories.json?print=pretty`).then(response => response.data.slice(0, 100),
+    const newIds = await api.get(`newstories.json?print=pretty`).then(response => response.data.slice(0, NUMBER_OF_ARTICLES),
         error => catchErrorInAxios(error));
     const idsBodies = await Promise.all(newIds.map((it) => api.get(getItemUrl(it)))).catch(error => catchErrorInAxios(error));
     return idsBodies.map((it) => it.data);
