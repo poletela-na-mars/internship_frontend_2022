@@ -2,6 +2,8 @@ import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 
+import "./MainPage.scss";
+
 import Header from "../header/Header";
 import Loader from "../loader/Loader";
 import ScrollTop from "../scroll-top/ScrollTop";
@@ -55,7 +57,7 @@ const MainPage = (props) => {
                 <ul className="list">
                     {getArticlesList(articles)}
                 </ul>
-                <ScrollTop/>
+                <ScrollTop displayAfter={100}/>
                 <Footer/>
             </div>
         );

@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
+import "../comment/Comment.scss"
 import Comment from "../comment/Comment";
 
 import {ActionCreator} from "../../reducer/action-creator";

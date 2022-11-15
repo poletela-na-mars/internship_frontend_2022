@@ -40,8 +40,8 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-//TODO: -move to scss
-//      -pagination
+//TODO: -clean-up in code
+//      -!pagination
 //      -security
 //      -autoprefixer
 

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import DOMPurify from 'dompurify';
+import DOMPurify from "dompurify";
+
+import "./Comment.scss";
 
 import {fixDate} from "../../utils";
 

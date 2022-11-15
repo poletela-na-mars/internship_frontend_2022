@@ -1,29 +1,31 @@
+@import "./../../vars.scss";
+
 footer {
   height: 80px;
-  font-family: "Exo 2 Light", sans-serif;
-  background-color: #3940d7;
-  color: #FFFFFF;
+  font-family: $light-font-family;
+  background-color: $blue-color;
+  color: $white-color;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+
   position: relative;
   z-index: 0;
+
   padding-right: 30px;
   padding-left: 30px;
 }
 
 .link-to-github {
   text-decoration: none;
-  color: #FFFFFF;
+  color: $white-color;
 }
 
 .link-to-github:hover {
-  color: #FFFFFF;
+  color: $white-color;
 }
 
 .link-to-github p {
   margin: 0;
 }
-
-/*# sourceMappingURL=Footer.css.map */

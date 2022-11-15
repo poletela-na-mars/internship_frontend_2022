@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import DOMPurify from "dompurify";
 
-import "./ArticlePage.css";
+import "./ArticlePage.scss";
 
 import Header from "../header/Header";
 import Loader from "../loader/Loader";
@@ -65,7 +65,7 @@ const ArticlePage = (props) => {
                     <Comments/>
                 </div>
                 <Footer/>
-                <ScrollTop/>
+                <ScrollTop displayAfter={100}/>
             </div>
         );
     } else if (currentArticle === -1) {
