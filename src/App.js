@@ -41,10 +41,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 //TODO: -clean-up in code
-//      -security
+//      -!security
 //      -autoprefixer
-//      -kidsAreAlive in Comment
-//      -scroll - hide when on footer
-//      -blue-button - extend
+//      -!kidsAreAlive in Comment
+//      -!blue-button - extend
 
 export default connect(null, mapDispatchToProps)(App);

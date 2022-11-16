@@ -6,9 +6,15 @@ const ScrollTop = ({displayAfter}) => {
   const [showButton, setShowButton] = useState(false);
   const handleShowButton = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > displayAfter) {
+    const documentHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    const partBeforeFooter = documentHeight - document.documentElement.clientHeight - 80;
+    if (scrolled > displayAfter && scrolled < partBeforeFooter) {
       setShowButton(true)
-    } else if (scrolled <= displayAfter) {
+    } else if (scrolled <= displayAfter || scrolled >= partBeforeFooter) {
       setShowButton(false)
     }
   };
