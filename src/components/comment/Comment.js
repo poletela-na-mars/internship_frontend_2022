@@ -9,7 +9,6 @@ const Comment = (props) => {
   const {comment} = props;
   const [isButtonPressed, setIsButtonPressed] = useState(false);
   const [kidsCommentsParentId, setKidsCommentsParentId] = useState(-1);
-  const [kidsAreAlive, setKidsAreAlive] = useState(false);
 
   const getButton = (comment) => {
     const id = comment.id;

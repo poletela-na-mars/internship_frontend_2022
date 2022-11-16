@@ -43,7 +43,6 @@ const mapDispatchToProps = (dispatch) => ({
 //TODO: -clean-up in code
 //      -!security
 //      -autoprefixer
-//      -!kidsAreAlive in Comment
 //      -!blue-button - extend
 
 export default connect(null, mapDispatchToProps)(App);
