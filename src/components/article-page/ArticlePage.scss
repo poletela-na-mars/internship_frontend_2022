@@ -1,18 +1,41 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "./../../vars.scss";
 
 .about-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   max-width: 100%;
 }
 
 .article-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 
   margin-top: 30px;
@@ -23,7 +46,6 @@
 .article-panel h1 {
   font-size: 20px;
   word-break: break-all;
-  -moz-hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
@@ -36,6 +58,8 @@
 }
 
 .go-back-button {
+  @include button;
+  background-color: transparent;
   min-height: 30px;
   min-width: 30px;
   background-image: url('../../img/go_back.png');
@@ -43,11 +67,22 @@
   background-size: cover;
   margin-right: 10px;
 
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+
+  transition: -webkit-transform .7s ease-in-out;
+
+  -o-transition: transform .7s ease-in-out;
+
   transition: transform .7s ease-in-out;
+
+  transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
 }
 
 .go-back-button:hover {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   transform: rotate(360deg);
+  cursor: pointer;
 }
 
 .optional-text {
@@ -59,11 +94,18 @@
 }
 
 .article-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   max-width: inherit;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
   word-wrap: break-word;
@@ -113,13 +155,21 @@
 }
 
 .comments-counter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 30px;
   padding: 20px;
 }
 
 .main-part {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }

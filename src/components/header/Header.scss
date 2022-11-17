@@ -1,11 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "./../../vars.scss";
 
 header {
   height: 130px;
   background-color: $blue-color;
   color: $white-color;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-right: 30px;
   padding-left: 30px;
@@ -20,12 +33,20 @@ header {
   left: 27%;
   z-index: 2;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 45%;
 }
 
 .update-img {
+  @include button;
+  background-color: transparent;
   height: 30px;
   width: 30px;
   background-image: url('../../img/update.png');
@@ -33,15 +54,26 @@ header {
   background-size: cover;
   margin-left: 50px;
 
+  -webkit-transition: -webkit-transform .7s linear;
+
+  transition: -webkit-transform .7s linear;
+
+  -o-transition: transform .7s linear;
+
   transition: transform .7s linear;
+
+  transition: transform .7s linear, -webkit-transform .7s linear;
 }
 
 .update-img:hover {
   cursor: pointer;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 
 .update-img-animation {
+  -webkit-animation: animation-button .7s infinite linear;
   animation: animation-button .7s infinite linear;
 
   -webkit-animation-name: animation-button;
@@ -60,44 +92,14 @@ header {
 
 @-webkit-keyframes animation-button {
   0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
     transform:rotate(0deg);}
   100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-
-@-moz-keyframes animation-button {
-  0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-
-@-o-keyframes animation-button {
-  0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
     transform:rotate(360deg);}
 }
 
 @keyframes animation-button {
   0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
     transform:rotate(0deg);}
   100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(720deg);
-    -o-transform:rotate(360deg);
     transform:rotate(360deg);}
 }

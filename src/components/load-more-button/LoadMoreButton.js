@@ -10,16 +10,13 @@ const LoadMoreButton = (props) => {
     numberOfPage, changeNumberOfPage
   } = props;
 
-  const onLoadMoreButtonClick = (evt) => {
+  const onLoadMoreButtonClick = () => {
     changeNumberOfPage(numberOfPage + 1)
-    if (numberOfPage >= NUMBER_OF_PAGES - 2) {
-      evt.target.style.display = "none";
-    }
   };
 
-  return <button className="blue-button load-more-button" onClick={(evt) => {
+  return numberOfPage < NUMBER_OF_PAGES - 1 ? <button className="blue-button load-more-button" onClick={(evt) => {
     onLoadMoreButtonClick(evt);
-  }}>Load More</button>;
+  }}>Load More</button> : "";
 };
 
 const mapStateToProps = (state) => ({

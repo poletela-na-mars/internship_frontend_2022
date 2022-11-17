@@ -40,7 +40,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-//TODO: -clean-up in code
-//      -autoprefixer
-
 export default connect(null, mapDispatchToProps)(App);

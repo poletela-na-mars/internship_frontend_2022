@@ -14,7 +14,7 @@ const fixDate = (date) => {
 
     //MM-dd-yyyy, h:m
     return day + ' ' + month + ' ' + year + ', ' + hours + ':' + minutes.slice(-2);
-}
+};
 
 export {
     fixDate

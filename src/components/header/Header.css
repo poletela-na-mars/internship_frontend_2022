@@ -1,4 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .blue-button {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   font-family: "Exo 2 Light", sans-serif;
   color: #FFFFFF;
@@ -6,9 +20,16 @@
   border-radius: 20px;
   border: none;
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 20px;
+  -webkit-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
   transition: all 1000ms ease;
+}
+.blue-button, .blue-button:active, .blue-button:focus {
+  border: none;
+  padding: 0;
 }
 
 .blue-button:before {
@@ -20,6 +41,8 @@
   height: 42px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
   transition: all 2s ease;
 }
 
@@ -31,8 +54,14 @@ header {
   height: 130px;
   background-color: #3940d7;
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-right: 30px;
   padding-left: 30px;
@@ -46,27 +75,43 @@ header {
   top: 35px;
   left: 27%;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 45%;
 }
 
 .update-img {
+  background-color: transparent;
   height: 30px;
   width: 30px;
   background-image: url("../../img/update.png");
   background-position: center;
   background-size: cover;
   margin-left: 50px;
+  -webkit-transition: -webkit-transform 0.7s linear;
+  transition: -webkit-transform 0.7s linear;
+  -o-transition: transform 0.7s linear;
   transition: transform 0.7s linear;
+  transition: transform 0.7s linear, -webkit-transform 0.7s linear;
+}
+.update-img, .update-img:active, .update-img:focus {
+  border: none;
+  padding: 0;
 }
 
 .update-img:hover {
   cursor: pointer;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 
 .update-img-animation {
+  -webkit-animation: animation-button 0.7s infinite linear;
   animation: animation-button 0.7s infinite linear;
   -webkit-animation-name: animation-button;
   -webkit-animation-duration: 0.7s;
@@ -85,56 +130,20 @@ header {
 @-webkit-keyframes animation-button {
   0% {
     -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes animation-button {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes animation-button {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 @keyframes animation-button {
   0% {
     -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(720deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }

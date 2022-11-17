@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 // fonts
 $medium-font-family: "Exo 2 Medium", sans-serif;
 $light-font-family: "Exo 2 Light", sans-serif;
@@ -8,7 +15,19 @@ $white-color: #FFFFFF;
 $blue-color: #3940d7;
 $light-blue-color: #F0F1FF;
 
+@mixin button {
+  &,
+  &:active,
+  &:focus {
+    border: none;
+    padding: 0;
+  }
+}
+
 .blue-button {
+  @include button;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   font-family: $light-font-family;
   color: $white-color;
@@ -16,8 +35,11 @@ $light-blue-color: #F0F1FF;
   border-radius: 20px;
   border: none;
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 20px;
+  -webkit-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
   transition: all 1000ms ease;
 }
 
@@ -30,6 +52,8 @@ $light-blue-color: #F0F1FF;
   height: 42px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
   transition: all 2s ease;
 }
 

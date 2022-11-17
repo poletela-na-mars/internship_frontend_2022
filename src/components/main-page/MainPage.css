@@ -1,4 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .blue-button {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   font-family: "Exo 2 Light", sans-serif;
   color: #FFFFFF;
@@ -6,9 +20,16 @@
   border-radius: 20px;
   border: none;
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 20px;
+  -webkit-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
   transition: all 1000ms ease;
+}
+.blue-button, .blue-button:active, .blue-button:focus {
+  border: none;
+  padding: 0;
 }
 
 .blue-button:before {
@@ -20,6 +41,8 @@
   height: 42px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
   transition: all 2s ease;
 }
 
@@ -28,9 +51,18 @@
 }
 
 .article-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   max-width: 100%;
   margin-left: 20%;
@@ -43,6 +75,7 @@
 
 .article-item-link, .article-item-info {
   max-width: inherit;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -60,9 +93,16 @@
 }
 
 .article-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 15px;
 }

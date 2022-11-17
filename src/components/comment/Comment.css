@@ -1,10 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .comment-item {
   margin: 0;
   word-wrap: break-word;
 }
 
 .comment-item-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 20px;
   padding: 12px;
@@ -17,21 +28,40 @@
 }
 
 .comment-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .comment-item-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   width: 100%;
   max-width: inherit;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-left: 20%;
   margin-right: 20%;
@@ -42,11 +72,14 @@
 
 .comment-info, .comment-title {
   max-width: inherit;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .comment-title-container {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -68,6 +101,7 @@
 
 .nested-comment {
   max-width: inherit;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 20px 0 0 0;
 }
